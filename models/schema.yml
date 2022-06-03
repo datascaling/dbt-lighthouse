@@ -4,14 +4,32 @@ models:
   - name: "orders"
     description: "A table of all orders."
     columns:
+      - name: "customer_id"
+      - name: "first_name"
+      - name: "last_name"
       - name: "status"
         description: "Status of an order: ordered/processed/complete"
+      - name: "first_order_date"
+      - name: "most_recent_order_date"
+      - name: "order_date"
+      - name: "status"
+      - name: "qty"
+        meta:
+          metrics:
+            quantity:
+              type: sum
+      - name: "unit_price"
+        meta:
+          metrics:
+            unit_price:
+              type: sum
       - name: "order_id"
         meta:
           metrics:
             order_count:
               type: count
       - name: "order_total"
+        hidden:true
         meta:
           metrics:
             order_total:
