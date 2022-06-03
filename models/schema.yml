@@ -28,5 +28,4 @@ models:
 #order_date	DATE	NULLABLE		
 #qty	INTEGER	NULLABLE		
 #unit_price	FLOAT	NULLABLE		
-#order_total	FLOAT	NULLABLE	
-*/
+#order_total	FLOAT	NULLABLE
