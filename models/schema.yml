@@ -18,7 +18,7 @@ models:
           metrics:
             quantity:
               type: sum
-      - name: "unit_price"
+      - name: "price"
         meta:
           metrics:
             unit_price:
@@ -31,7 +31,7 @@ models:
       - name: "order_total"
         meta:
           metrics:
-            order_total:
+            total:
               type: sum
 
 
