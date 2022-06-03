@@ -29,7 +29,6 @@ models:
             order_count:
               type: count
       - name: "order_total"
-        hidden:true
         meta:
           metrics:
             order_total:
