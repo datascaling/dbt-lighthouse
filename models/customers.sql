@@ -33,11 +33,17 @@ final as (
         customers.last_name,
         customer_orders.first_order_date,
         customer_orders.most_recent_order_date,
-        coalesce(customer_orders.number_of_orders, 0) as number_of_orders
+        orders.order_date,
+        orders.status,
+        orders.qty,
+        orders.unit_price,
+        orders.qty*orders.unit_price as order_total
+        -- coalesce(customer_orders.number_of_orders, 0) as number_of_orders
 
     from customers
 
-    left join customer_orders using (customer_id)
+    join customer_orders using (customer_id)
+    join orders using (customer_id)
 
 )
 
