@@ -28,6 +28,7 @@ customer_orders as (
 final as (
 
     select
+        order_id,
         customers.customer_id,
         customers.first_name,
         customers.last_name,
