@@ -18,10 +18,10 @@ models:
           metrics:
             quantity:
               type: sum
-      - name: "price"
+      - name: "unit_price"
         meta:
           metrics:
-            unit_price:
+            price:
               type: sum
       - name: "order_id"
         meta:
