@@ -34,6 +34,7 @@ final as (
         customer_orders.first_order_date,
         customer_orders.most_recent_order_date,
         orders.order_date,
+        orders.status,
         orders.qty,
         orders.unit_price,
         orders.qty*orders.unit_price as order_total
@@ -41,8 +42,8 @@ final as (
 
     from customers
 
-    left join customer_orders using (customer_id)
-    left join orders using (customer_id)
+    join customer_orders using (customer_id)
+    join orders using (customer_id)
 
 )
 

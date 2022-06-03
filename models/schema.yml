@@ -1,0 +1,32 @@
+# schema.yml
+version: 2
+models:
+  - name: "orders"
+    description: "A table of all orders."
+    columns:
+      - name: "status"
+        description: "Status of an order: ordered/processed/complete"
+      - name: "order_id"
+        meta:
+          metrics:
+            order_count:
+              type: count
+      - name: "order_total"
+        meta:
+          metrics:
+            order_total:
+              type: sum
+
+
+
+
+#customer_id	INTEGER	NULLABLE		
+#first_name	STRING	NULLABLE		
+#last_name	STRING	NULLABLE		
+#first_order_date	DATE	NULLABLE		
+#most_recent_order_date	DATE	NULLABLE		
+#order_date	DATE	NULLABLE		
+#qty	INTEGER	NULLABLE		
+#unit_price	FLOAT	NULLABLE		
+#order_total	FLOAT	NULLABLE	
+*/
