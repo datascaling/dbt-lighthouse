@@ -30,7 +30,6 @@ models:
               type: count
       - name: "order_total"
         meta:
-        hidden: true
           metrics:
             order_total:
               type: sum
